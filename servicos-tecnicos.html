@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Serviços Técnicos | LPS - Lean Performance Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#A68E5E",
+            "primary-dark": "#8C764B",
+            "bg-dark": "#101820",
+            surface: "#1A242D",
+            "surface-2": "#22303B"
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            body: ["Noto Sans", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="bg-white font-body text-gray-800">
+
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/5541998998248" target="_blank"
+     class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-2 border-white"
+     aria-label="Falar no WhatsApp">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.628 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- NAV -->
+  <nav class="bg-bg-dark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html#topo" class="flex items-center gap-3">
+        <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
+             class="h-14 md:h-20 w-auto object-contain" loading="eager"/>
+      </a>
+
+      <div class="hidden md:flex gap-8 text-white/80 text-sm font-medium items-center">
+        <a href="index.html#metodo" class="hover:text-primary transition">MÉTODO</a>
+        <a href="index.html#planejamento" class="hover:text-primary transition">PLANEJAMENTO</a>
+        <a href="index.html#contato" class="hover:text-primary transition">CONTATO</a>
+        <a href="https://wa.me/5541998998248" target="_blank"
+           class="bg-primary text-white px-4 py-2 rounded shadow-md hover:bg-primary-dark transition">ORÇAMENTO</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-bg-dark py-20 px-6 border-b border-primary/20">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 items-center reveal">
+      <div class="md:col-span-7">
+        <p class="text-primary font-bold uppercase tracking-widest text-xs mb-3">Serviços Técnicos</p>
+        <h1 class="text-4xl md:text-6xl font-display font-bold text-white leading-tight">
+          Elétrica, Instrumentação <span class="text-primary">& Automação</span>
+        </h1>
+        <p class="text-gray-400 mt-6 text-lg leading-relaxed">
+          Execução técnica com padrão industrial: infraestrutura, cabos, painéis, instrumentos, malhas e apoio à automação.
+          Entrega com <strong>segurança</strong>, <strong>organização</strong>, <strong>testes</strong> e <strong>rastreabilidade</strong>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+          <a href="https://wa.me/5541998998248" target="_blank"
+             class="bg-primary text-white px-8 py-4 rounded-xl shadow-xl hover:bg-primary-dark transition font-bold inline-flex items-center gap-2 justify-center">
+            <span class="material-symbols-outlined">chat</span> Orçamento rápido no WhatsApp
+          </a>
+          <a href="#galerias"
+             class="border border-primary/60 text-white px-8 py-4 rounded-xl hover:border-primary transition font-bold inline-flex items-center gap-2 justify-center">
+            <span class="material-symbols-outlined">photo_library</span> Ver fotos reais
+          </a>
+        </div>
+
+        <div class="mt-8 text-[11px] text-gray-500 uppercase tracking-widest">
+          NR10 • NR35 • Loop test • Megger • TAGs • Comissionamento • Entrega organizada
+        </div>
+      </div>
+
+      <div class="md:col-span-5">
+        <div class="rounded-3xl overflow-hidden img-glow border border-primary/20">
+          <img src="servicos-hero.jpg" alt="Serviços Técnicos - LPS" class="w-full h-[360px] md:h-[420px] object-cover"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DIFERENCIAIS -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto reveal">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+          <h3 class="font-display font-bold text-xl text-bg-dark mb-2 uppercase">Padrão de Entrega</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Organização, identificação, acabamento e documentação para inspeção e comissionamento.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">health_and_safety</span>
+          <h3 class="font-display font-bold text-xl text-bg-dark mb-2 uppercase">Segurança</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Execução com disciplina de campo: NR10/NR35, checklists, rotina e controle de qualidade.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">assignment</span>
+          <h3 class="font-display font-bold text-xl text-bg-dark mb-2 uppercase">Evidências</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Relatórios e testes (quando aplicável): megger, continuidade, loop test, listas de verificação.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <section class="py-14 px-6 bg-gray-50 border-y border-gray-100" id="galerias">
+    <div class="max-w-7xl mx-auto reveal">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl font-display font-bold uppercase">
+          Portfólio por <span class="text-primary">disciplina</span>
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Clique em uma foto para ampliar, navegar e ver a legenda técnica.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button class="chip active px-5 py-2 rounded-full border border-gray-200 bg-white font-bold text-sm"
+                data-tab="tab-eletrica">
+          <span class="material-symbols-outlined align-middle text-base">bolt</span> Elétrica
+        </button>
+        <button class="chip px-5 py-2 rounded-full border border-gray-200 bg-white font-bold text-sm"
+                data-tab="tab-instrumentacao">
+          <span class="material-symbols-outlined align-middle text-base">tune</span> Instrumentação
+        </button>
+        <button class="chip px-5 py-2 rounded-full border border-gray-200 bg-white font-bold text-sm"
+                data-tab="tab-automacao">
+          <span class="material-symbols-outlined align-middle text-base">memory</span> Automação
+        </button>
+      </div>
+
+      <!-- TAB ELÉTRICA -->
+      <div id="tab-eletrica" class="tab active">
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-7">
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+              <h3 class="font-display font-bold text-2xl text-bg-dark uppercase mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">bolt</span> Elétrica Industrial
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Infraestrutura, cabos, painéis e ligações com padrão de entrega: identificação, organização e testes conforme necessidade do projeto.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <p class="font-bold mb-1">Execução</p>
+                  <ul class="space-y-1">
+                    <li>• Leitos/eletrocalhas/eletrodutos</li>
+                    <li>• Lançamento e identificação de cabos</li>
+                    <li>• Painéis (CCM/QGBT/Controle)</li>
+                    <li>• Ligações de motores/equipamentos</li>
+                  </ul>
+                </div>
+                <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <p class="font-bold mb-1">Entrega Técnica</p>
+                  <ul class="space-y-1">
+                    <li>• Continuidade e isolação (megger)</li>
+                    <li>• Checklists e evidências</li>
+                    <li>• Organização final para inspeção</li>
+                    <li>• Apoio ao comissionamento</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <a href="https://wa.me/5541998998248" target="_blank"
+                   class="bg-primary text-white px-8 py-3 rounded-xl shadow-lg hover:bg-primary-dark transition font-bold inline-flex items-center gap-2">
+                  <span class="material-symbols-outlined">chat</span> Quero orçamento de Elétrica
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <img src="eletrica-01.jpg" data-gallery="eletrica" data-caption="Painel/CCM: sinalização, botoeiras e identificação para operação segura."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 01">
+              <img src="eletrica-02.jpg" data-gallery="eletrica" data-caption="Montagem de painel: bornes, disjuntores e organização de fiação conforme padrão."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 02">
+              <img src="eletrica-03.jpg" data-gallery="eletrica" data-caption="Painel em ajuste: correção de chicotes e melhoria de organização/identificação."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 03">
+              <img src="eletrica-04.jpg" data-gallery="eletrica" data-caption="Trabalho em campo: lançamento/adequação de cabos e acabamento para entrega organizada."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 04">
+            </div>
+            <p class="text-xs text-gray-500 mt-3">
+            
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB INSTRUMENTAÇÃO -->
+      <div id="tab-instrumentacao" class="tab">
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-7">
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+              <h3 class="font-display font-bold text-2xl text-bg-dark uppercase mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">tune</span> Instrumentação
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Instalação, identificação (TAG), suportes/racks, conexões e liberação para comissionamento com rastreabilidade.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <p class="font-bold mb-1">Execução</p>
+                  <ul class="space-y-1">
+                    <li>• Montagem de instrumentos e suportes</li>
+                    <li>• Racks, caixas e interligações</li>
+                    <li>• Identificação TAG conforme projeto</li>
+                    <li>• Organização de cabos/sinais</li>
+                  </ul>
+                </div>
+                <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <p class="font-bold mb-1">Entrega Técnica</p>
+                  <ul class="space-y-1">
+                    <li>• Verificação de sinais (4–20mA)</li>
+                    <li>• Loop check / loop test (quando aplicável)</li>
+                    <li>• Checklists e evidências</li>
+                    <li>• Apoio ao comissionamento</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <a href="https://wa.me/5541998998248" target="_blank"
+                   class="bg-primary text-white px-8 py-3 rounded-xl shadow-lg hover:bg-primary-dark transition font-bold inline-flex items-center gap-2">
+                  <span class="material-symbols-outlined">chat</span> Quero orçamento de Instrumentação
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <img src="instr-01.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: substitua por fotos reais de instrumentos/TAG em campo."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 01">
+              <img src="instr-02.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: instalação e organização para comissionamento."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 02">
+              <img src="instr-03.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: interligações de sinal e identificação."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 03">
+              <img src="instr-04.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: suporte a loop test / evidências."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 04">
+            </div>
+            <p class="text-xs text-gray-500 mt-3">
+             
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB AUTOMAÇÃO -->
+      <div id="tab-automacao" class="tab">
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-7">
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+              <h3 class="font-display font-bold text-2xl text-bg-dark uppercase mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">memory</span> Automação
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Apoio à automação e integração: interligações de CLP/remotas, organização de bornes, testes de sinais e suporte em comissionamento.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <p class="font-bold mb-1">Execução</p>
+                  <ul class="space-y-1">
+                    <li>• Interligação de CLP e remotas</li>
+                    <li>• Organização de bornes e painéis</li>
+                    <li>• Cabos de controle e sinal</li>
+                    <li>• Identificação e padronização</li>
+                  </ul>
+                </div>
+                <div class="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <p class="font-bold mb-1">Entrega Técnica</p>
+                  <ul class="space-y-1">
+                    <li>• Teste de sinais/IO (quando aplicável)</li>
+                    <li>• Suporte a loop test</li>
+                    <li>• Checklists e evidências</li>
+                    <li>• Apoio em partida assistida</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <a href="https://wa.me/5541998998248" target="_blank"
+                   class="bg-primary text-white px-8 py-3 rounded-xl shadow-lg hover:bg-primary-dark transition font-bold inline-flex items-center gap-2">
+                  <span class="material-symbols-outlined">chat</span> Quero orçamento de Automação
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <img src="auto-01.jpg" data-gallery="automacao" data-caption="Painel de automação: organização de bornes e interligações para integração/partida."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 01">
+              <img src="auto-02.jpg" data-gallery="automacao" data-caption="I/O e rede: patch cords e conectividade com rastreabilidade de pontos."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 02">
+              <img src="auto-03.jpg" data-gallery="automacao" data-caption="Montagem/adequação de painel: organização e identificação para entrega e testes."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 03">
+              <img src="auto-04.jpg" data-gallery="automacao" data-caption="Painel com I/O e acessórios: checagem de sinais (quando aplicável) e evidências."
+                   onclick="openLightbox(this)"
+                   class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 04">
+            </div>
+            <p class="text-xs text-gray-500 mt-3">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto reveal text-center">
+      <h2 class="text-4xl font-display font-bold uppercase">Quer acelerar sua <span class="text-primary">entrega</span>?</h2>
+      <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+        Envie pelo WhatsApp: local, prazo, fotos do campo/painel, lista de serviços e se existe projeto/diagrama.
+        A gente retorna com escopo e orientação de execução.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/5541998998248" target="_blank"
+           class="bg-primary text-white px-10 py-4 rounded-xl shadow-xl hover:bg-primary-dark transition font-bold inline-flex items-center gap-2 justify-center">
+          <span class="material-symbols-outlined">chat</span> Falar agora no WhatsApp
+        </a>
+        <a href="index.html#contato"
+           class="border border-primary/60 text-bg-dark px-10 py-4 rounded-xl hover:border-primary transition font-bold inline-flex items-center gap-2 justify-center bg-white">
+          <span class="material-symbols-outlined text-primary">arrow_back</span> Voltar para o site
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-bg-dark text-white py-16 px-6 border-t border-primary/20">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+      <div class="reveal">
+        <a href="index.html#topo" class="inline-flex items-center justify-center md:justify-start mb-6">
+          <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
+               class="h-14 w-auto object-contain" loading="lazy" />
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Serviços técnicos industriais com padrão de entrega, segurança e evidência — com mentalidade Lean.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <h4 class="font-bold text-primary mb-4 uppercase tracking-widest text-sm">Contato</h4>
+        <p class="text-gray-300 text-sm">Telêmaco Borba, PR</p>
+        <p class="text-gray-300 text-sm mt-2">(41) 99899-8248</p>
+        <p class="text-gray-400 text-xs mt-4">leanperformancesolutions@hotmail.com</p>
+      </div>
+
+      <div class="reveal">
+        <h4 class="font-bold text-primary mb-4 uppercase tracking-widest text-sm">Orçamento</h4>
+        <a href="https://wa.me/5541998998248" target="_blank"
+           class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 transition font-bold shadow-lg">
+          <span class="material-symbols-outlined">chat</span> WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-[0.2em]">
+      © <span id="year"></span> Lean Performance Solutions — Planejar bem é executar melhor.
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Galeria de imagens">
+    <div class="lb-close" onclick="closeLightbox()" aria-label="Fechar">✕</div>
+
+    <div class="lightbox-media">
+      <span class="lb-btn lb-prev" onclick="prevLightbox()" aria-label="Imagem anterior">‹</span>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Imagem ampliada">
+      <span class="lb-btn lb-next" onclick="nextLightbox()" aria-label="Próxima imagem">›</span>
+    </div>
+
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
