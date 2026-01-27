@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>LPS - Lean Performance Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#A68E5E",      // dourado LPS
+            "primary-dark": "#8C764B",
+            "bg-dark": "#101820",    // azul marinho profundo
+            surface: "#1A242D",      // cards em fundo escuro
+            "surface-2": "#22303B"
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            body: ["Noto Sans", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: all 0.75s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+
+<body class="bg-white font-body text-gray-800">
+
+  <!-- NAV -->
+  <nav class="bg-bg-dark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#topo" class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-3xl">shield</span>
+        <span class="text-white font-display font-bold text-xl tracking-wider">LPS SOLUTIONS</span>
+      </a>
+
+      <div class="hidden md:flex gap-8 text-white/80 text-sm font-medium items-center">
+        <a href="#sobre" class="hover:text-primary transition">SOBRE</a>
+        <a href="#metodo" class="hover:text-primary transition">MÉTODO</a>
+        <a href="#servicos" class="hover:text-primary transition">SERVIÇOS</a>
+        <a href="#clientes" class="hover:text-primary transition">CLIENTES</a>
+        <a href="#contato" class="bg-primary text-white px-4 py-2 rounded shadow-md hover:bg-primary-dark transition">ORÇAMENTO</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="topo" class="bg-bg-dark py-20 px-6 border-b border-primary/20">
+    <div class="max-w-6xl mx-auto text-center reveal">
+      <h1 class="text-4xl md:text-6xl font-display font-bold text-white mb-6">
+        Do Planejamento à <span class="text-primary">Execução Confiável</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        Somos uma empresa técnica que integra <strong>Planejamento</strong>, <strong>Lean Construction</strong> e
+        <strong>Last Planner System (LPS)</strong> com execução profissional de <strong>serviços elétricos</strong> e
+        <strong>instrumentação</strong> — com foco em segurança, produtividade e previsibilidade.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contato" class="bg-primary text-white px-6 py-3 rounded-lg shadow hover:bg-primary-dark transition">
+          Solicitar Avaliação Técnica
+        </a>
+        <a href="#metodo" class="border border-primary/60 text-white px-6 py-3 rounded-lg hover:border-primary transition">
+          Ver método LPS (30–60–90 dias)
+        </a>
+      </div>
+
+      <!-- TODO: Trocar por imagem real sua (campo/obra) -->
+      <div class="mt-12 mx-auto max-w-5xl rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+        <div class="bg-surface-2 p-10 text-left">
+          <p class="text-white/90 font-semibold">Diferencial</p>
+          <p class="text-gray-300 mt-2">
+            Estratégia → Planejamento → Execução → Performance. Método, dados e rotina: plano exequível, indicadores,
+            governança e controle operacional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-3xl font-display font-bold mb-6">
+          Quem somos — <span class="text-primary">A LPS</span>
+        </h2>
+        <ul class="space-y-4 text-gray-700 leading-relaxed">
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-primary">check_circle</span>
+            <span>Planejamento, gestão e controle de obras industriais com Lean Construction e Last Planner System (LPS).</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-primary">check_circle</span>
+            <span>Controles de produção e HH, Lookahead, PPC, Curva S, restrições e governança do planejamento.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="material-symbols-outlined text-primary">check_circle</span>
+            <span>Prestação de serviços técnicos: Elétrica Industrial, Instrumentação, apoio à automação, predial/residencial e fornecimento de HH.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-bg-dark p-10 rounded-2xl shadow-2xl reveal border border-primary/20">
+        <h3 class="text-white font-display font-bold text-2xl mb-4">
+          Quem está por trás da LPS
+        </h3>
+        <p class="text-gray-300 leading-relaxed">
+          <strong>Paulo Ricardo Freitas</strong> — especialista em planejamento e LPS, com trajetória iniciada no campo e
+          vivência em elétrica industrial, instrumentação e apoio à automação. Autor de artigo técnico sobre LPS,
+          <strong>Prêmio InovaInfra</strong> e publicação na revista <em>O Empreiteiro</em>.
+        </p>
+        <p class="text-primary font-semibold mt-5">
+          Planejamento feito por quem já executou no campo.
+        </p>
+
+        <!-- TODO: inserir sua foto profissional -->
+        <div class="mt-6 p-5 rounded-xl bg-surface text-white/90 text-sm border border-primary/15">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary">workspace_premium</span>
+            <span class="font-semibold">Autoridade técnica</span>
+          </div>
+          <p class="text-gray-300 mt-2">
+            Reconhecido por ganhos de prazo, produtividade e confiabilidade em obras industriais e prediais.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMAS -->
+  <section class="bg-gray-50 py-20 px-6">
+    <div class="max-w-7xl mx-auto reveal">
+      <h2 class="text-3xl font-display font-bold text-center mb-12">
+        Principais problemas das obras (que a LPS resolve)
+      </h2>
+
+      <div class="grid md:grid-cols-5 gap-4">
+        <div class="p-6 rounded-xl bg-white border border-gray-200 shadow">
+          <p class="font-bold">Plano pouco confiável</p>
+          <p class="text-sm text-gray-600 mt-2">Sem compromisso real do campo.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gray-200 shadow">
+          <p class="font-bold">Restrições não mapeadas</p>
+          <p class="text-sm text-gray-600 mt-2">Travando frentes e causando paradas.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gray-200 shadow">
+          <p class="font-bold">Retrabalho e esperas</p>
+          <p class="text-sm text-gray-600 mt-2">Falta de prontidão e sequência.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gray-200 shadow">
+          <p class="font-bold">Comunicação fragmentada</p>
+          <p class="text-sm text-gray-600 mt-2">Engenharia, planejamento e campo desalinhados.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-gray-200 shadow">
+          <p class="font-bold">Indicadores tardios</p>
+          <p class="text-sm text-gray-600 mt-2">Decisão sem dados, correção atrasada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section id="metodo" class="bg-bg-dark py-20 px-6 text-white border-t border-primary/20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center reveal">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          Método LPS na prática: <span class="text-primary">do plano à produção real</span>
+        </h2>
+        <p class="text-gray-300 max-w-4xl mx-auto">
+          O Last Planner System foi criado por <strong>Glenn Ballard</strong>, no início dos anos 90, para aumentar a
+          confiabilidade do fluxo de trabalho nas obras e medir aderência por meio do <strong>PPC</strong>.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6 mt-12">
+        <div class="bg-surface p-7 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-3">rule</span>
+          <h3 class="font-bold text-lg">Diagnóstico</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Identificamos gargalos, restrições e riscos do fluxo de produção.
+          </p>
+        </div>
+
+        <div class="bg-surface p-7 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-3">timeline</span>
+          <h3 class="font-bold text-lg">Pull Planning</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Sessões colaborativas para lógica construtiva, ritmo e capacidade real das frentes.
+          </p>
+        </div>
+
+        <div class="bg-surface p-7 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-3">fact_check</span>
+          <h3 class="font-bold text-lg">Lookahead</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Médio prazo (3–12 semanas) para remover restrições e garantir prontidão.
+          </p>
+        </div>
+
+        <div class="bg-surface p-7 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-3">handshake</span>
+          <h3 class="font-bold text-lg">Programação Semanal</h3>
+          <p class="text-gray-300 text-sm mt-2">
+            Compromissos confiáveis + check-in/out + indicadores (PPC, aderência, ritmo, HH).
+          </p>
+        </div>
+      </div>
+
+      <!-- BENEFÍCIOS -->
+      <div class="mt-14 grid md:grid-cols-2 gap-8 items-start reveal">
+        <div class="bg-surface-2 p-8 rounded-2xl border border-primary/15">
+          <h3 class="font-display font-bold text-2xl mb-4">Resultados esperados</h3>
+          <ul class="space-y-3 text-gray-200 text-sm">
+            <li>• Mais previsibilidade de prazo, com redução de variações e interrupções.</li>
+            <li>• Aumento de produtividade com prontidão e fluxo contínuo.</li>
+            <li>• Menos retrabalho e melhor uso de recursos (equipes, materiais e equipamentos).</li>
+            <li>• Decisão baseada em dados (PPC, aderência, ritmo, restrições, HH produtivo).</li>
+            <li>• Mais segurança, reduzindo improviso e riscos.</li>
+          </ul>
+        </div>
+
+        <div class="bg-surface-2 p-8 rounded-2xl border border-primary/15">
+          <h3 class="font-display font-bold text-2xl mb-4">Timeline 30–60–90 dias</h3>
+          <div class="space-y-4 text-gray-200 text-sm">
+            <div class="p-4 rounded-xl bg-surface border border-primary/10">
+              <p class="text-primary font-semibold">0–30 dias</p>
+              <p>Diagnóstico e primeiro Pull Planning.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-surface border border-primary/10">
+              <p class="text-primary font-semibold">31–60 dias</p>
+              <p>Lookahead rodando, prontidão e gestão de restrições.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-surface border border-primary/10">
+              <p class="text-primary font-semibold">61–90 dias</p>
+              <p>Governança, melhoria contínua e handover/capacitação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center reveal">
+        <h2 class="text-3xl font-display font-bold mb-4">Serviços da LPS</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          Transformamos planejamento em resultado real. Além do método, entregamos execução técnica especializada:
+          elétrica, instrumentação, apoio à automação, predial/residencial e supervisão/testes/comissionamento.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="bg-bg-dark p-8 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">event_note</span>
+          <h3 class="text-white text-xl font-bold mb-3">Planejamento & Governança</h3>
+          <p class="text-gray-300 text-sm">
+            Lean Construction + LPS: Lookahead, PPC, Curva S, restrições, rituais e indicadores.
+          </p>
+        </div>
+
+        <div class="bg-bg-dark p-8 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">electric_bolt</span>
+          <h3 class="text-white text-xl font-bold mb-3">Elétrica Industrial</h3>
+          <p class="text-gray-300 text-sm">
+            Infraestrutura (leitos/eletrocalhas/eletrodutos), cabos, painéis, motores, testes e start-up elétrico.
+          </p>
+        </div>
+
+        <div class="bg-bg-dark p-8 rounded-xl border-t-4 border-primary reveal shadow-xl">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4">precision_manufacturing</span>
+          <h3 class="text-white text-xl font-bold mb-3">Instrumentação</h3>
+          <p class="text-gray-300 text-sm">
+            Instrumentos de campo, cabos, interligação, etiquetagem, loop test e verificação de sinais.
+          </p>
+        </div>
+      </div>
+
+      <!-- LISTAS TÉCNICAS -->
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="p-8 rounded-2xl border border-gray-200 shadow reveal">
+          <h3 class="font-display font-bold text-2xl mb-4">Escopo Elétrica Industrial</h3>
+          <ul class="text-sm text-gray-700 space-y-2">
+            <li>• Infraestrutura: eletrocalhas, leitos e eletrodutos</li>
+            <li>• Lançamento/identificação/organização de cabos</li>
+            <li>• Montagem e interligação de painéis (CCM, QGBT, QD, controle)</li>
+            <li>• Ligações de motores, bombas e equipamentos</li>
+            <li>• Testes de continuidade e isolação + relatórios</li>
+            <li>• Apoio em pré-comissionamento e comissionamento</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-gray-200 shadow reveal">
+          <h3 class="font-display font-bold text-2xl mb-4">Instrumentação & Automação (apoio)</h3>
+          <ul class="text-sm text-gray-700 space-y-2">
+            <li>• Instalação de instrumentos, suportes e racks</li>
+            <li>• Passagem/organização de cabos e interligação</li>
+            <li>• Identificação e etiquetagem conforme projeto</li>
+            <li>• Loop test e verificação de sinais (4–20 mA / digitais)</li>
+            <li>• Apoio à automação: interligação CLPs, remotas e I/O</li>
+            <li>• Obs.: apoio técnico (não integrador completo)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES -->
+  <section id="clientes" class="bg-gray-50 py-20 px-6">
+    <div class="max-w-7xl mx-auto reveal">
+      <h2 class="text-3xl font-display font-bold text-center mb-10">Clientes e experiência de mercado</h2>
+      <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">
+        Atuação do fundador com grandes grupos industriais, com foco em segurança, produtividade, prazo e confiabilidade.
+      </p>
+
+      <div class="grid md:grid-cols-5 gap-4">
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow text-center font-semibold">Klabin</div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow text-center font-semibold">Gerdau</div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow text-center font-semibold">Raízen</div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow text-center font-semibold">Bracell</div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow text-center font-semibold">Suzano</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <footer id="contato" class="bg-bg-dark text-white py-16 px-6 border-t border-primary/20">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 items-start">
+      <div class="reveal">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-3xl">shield</span>
+          <span class="font-display font-bold text-xl tracking-wider">LPS – Lean Performance Solutions</span>
+        </div>
+        <p class="text-gray-300 mt-4">
+          Planejamento premiado, vivência de campo e método aplicado à realidade da obra.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <p class="font-semibold text-primary mb-3">Contato</p>
+        <p class="text-gray-300">Av. Horácio Klabin — Telêmaco Borba, PR</p>
+        <p class="text-gray-300">(41) 99899-8248</p>
+        <p class="text-gray-300">leanperformancesolutions@hotmail.com</p>
+      </div>
+
+      <div class="reveal">
+        <p class="font-semibold text-primary mb-3">Chamada</p>
+        <p class="text-gray-300 mb-4">
+          Quer elevar a previsibilidade e transformar plano em execução real?
+        </p>
+        <a href="https://wa.me/5541998998248" target="_blank"
+           class="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-lg hover:bg-primary-dark transition">
+          <span class="material-symbols-outlined">chat</span>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-white/10 text-sm text-white/60 reveal">
+      © <span id="year"></span> LPS – Lean Performance Solutions. Planejar bem é executar melhor.
+    </div>
+  </footer>
+
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 130;
+        if (elementTop < windowHeight - elementVisible) reveals[i].classList.add("active");
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    window.onload = () => { reveal(); document.getElementById("year").textContent = new Date().getFullYear(); };
+  </script>
+
+</body>
+</html>
