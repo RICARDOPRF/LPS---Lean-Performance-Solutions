@@ -52,10 +52,9 @@
   <nav class="bg-bg-dark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
 
-      <!-- LOGO REAL (opção 1 horizontal) -->
       <a href="#topo" class="flex items-center gap-3">
         <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
-             class="h-14 md:h-18 w-auto object-contain"
+             class="h-14 md:h-20 w-auto object-contain"
              loading="eager" />
       </a>
 
@@ -65,6 +64,10 @@
         <a href="#planejamento" class="hover:text-primary transition">PLANEJAMENTO</a>
         <a href="#servicos" class="hover:text-primary transition">SERVIÇOS</a>
         <a href="#clientes" class="hover:text-primary transition">CLIENTES</a>
+
+        <!-- ✅ NOVO LINK -->
+        <a href="#solucoes" class="hover:text-primary transition">SOLUÇÕES DIGITAIS</a>
+
         <a href="#contato" class="bg-primary text-white px-4 py-2 rounded shadow-md hover:bg-primary-dark transition">ORÇAMENTO</a>
       </div>
     </div>
@@ -373,6 +376,69 @@
     </div>
   </section>
 
+  <!-- ✅ NOVA SEÇÃO: SOLUÇÕES DIGITAIS (APÓS RESULTADOS NA PRÁTICA) -->
+  <section id="solucoes" class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto reveal">
+
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-display font-bold uppercase">
+          Soluções Digitais <span class="text-primary">LPS</span>
+        </h2>
+        <p class="text-gray-500 mt-4 max-w-3xl mx-auto">
+          Ferramentas práticas que sustentam a rotina de gestão: planilhas inteligentes, dashboards e apps — tudo sob medida para sua obra.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+        <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-primary">table_chart</span>
+            <h3 class="text-xl font-display font-bold text-bg-dark uppercase">Planilhas & Controles</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            HH, PPC, Curva S, Lookahead, restrições e produtividade (HH/un), prontos para rodar e apresentar.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-primary">dashboard</span>
+            <h3 class="text-xl font-display font-bold text-bg-dark uppercase">Dashboards Online</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Painel de bordo web com indicadores, metas e alertas — visual premium para decisão rápida.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-primary">apps</span>
+            <h3 class="text-xl font-display font-bold text-bg-dark uppercase">Apps & Sistemas</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Controle de materiais (RM/estoque/baixa), checklists, RDO, portais e automações sob demanda.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <a href="produtos.html"
+           class="bg-primary text-white px-10 py-4 rounded-xl shadow-xl hover:bg-primary-dark transition font-bold inline-flex items-center gap-2">
+          <span class="material-symbols-outlined">visibility</span> Saber mais (catálogo completo)
+        </a>
+        <div class="mt-4">
+          <a href="https://wa.me/5541998998248" target="_blank"
+             class="text-sm font-semibold text-bg-dark hover:text-primary transition inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary">chat</span> Quero pedir um orçamento rápido no WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- SERVIÇOS -->
   <section id="servicos" class="py-24 px-6">
     <div class="max-w-7xl mx-auto">
@@ -423,7 +489,7 @@
       <div class="grid grid-cols-2 md:grid-cols-5 gap-12 items-center justify-items-center">
         <img src="Klabin.png" alt="Logo Klabin" class="h-12 w-auto max-w-[140px] object-contain hover:scale-110 transition duration-300">
         <img src="gerdau.jpg" alt="Logo Gerdau" class="h-12 w-auto max-w-[140px] object-contain hover:scale-110 transition duration-300">
-        <img src="Raizen.png" alt="Logo Raízen" class="h-18 w-auto max-w-[140px] object-contain hover:scale-110 transition duration-300">
+        <img src="Raizen.png" alt="Logo Raízen" class="h-16 w-auto max-w-[140px] object-contain hover:scale-110 transition duration-300">
         <img src="bracell.png" alt="Logo Bracell" class="h-12 w-auto max-w-[140px] object-contain hover:scale-110 transition duration-300">
         <img src="suzano.jpg" alt="Logo Suzano" class="h-12 w-auto max-w-[140px] object-contain hover:scale-110 transition duration-300">
       </div>
@@ -434,8 +500,6 @@
   <footer id="contato" class="bg-bg-dark text-white py-20 px-6 border-t border-primary/20">
     <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
       <div class="reveal">
-
-        <!-- LOGO REAL (no lugar do shield + texto) -->
         <a href="#topo" class="inline-flex items-center justify-center md:justify-start mb-6">
           <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
                class="h-14 w-auto object-contain" loading="lazy" />
