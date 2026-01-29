@@ -5,8 +5,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Produtos Digitais - LPS</title>
 
+  <!-- Canonical (endereço oficial desta página) -->
+  <link rel="canonical" href="https://www.leanperformancesolutions.com.br/produtos.html"/>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700efamily=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- ✅ CORRIGIDO: estava com "700efamily" -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet"/>
 
   <script>
@@ -41,8 +46,8 @@
   <!-- NAV -->
   <nav class="bg-bg-dark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="index.html#topo" class="flex items-center gap-3">
-        <!-- ✅ AJUSTE: extensão + logo maior -->
+      <!-- ✅ AJUSTE: em vez de "index.html#topo", manda pra raiz e deixa o script resolver hash se precisar -->
+      <a href="/#topo" class="flex items-center gap-3">
         <img
           src="logo-transparente.png"
           alt="LPS"
@@ -53,8 +58,10 @@
       </a>
 
       <div class="flex gap-4 items-center">
-        <a href="index.html#solucoes" class="text-white/80 hover:text-primary transition text-sm font-medium">Voltar</a>
-        <a href="https://wa.me/5541998998248" target="_blank"
+        <!-- ✅ AJUSTE: raiz do domínio -->
+        <a href="/#solucoes" class="text-white/80 hover:text-primary transition text-sm font-medium">Voltar</a>
+
+        <a href="https://wa.me/5541998998248" target="_blank" rel="noopener noreferrer"
            class="bg-primary text-white px-4 py-2 rounded-lg shadow hover:bg-primary-dark transition text-sm font-bold">
           WhatsApp
         </a>
@@ -77,7 +84,7 @@
         <a href="#catalogo" class="bg-primary text-white px-8 py-4 rounded-xl shadow-xl hover:bg-primary-dark transition font-bold">
           Ver catálogo
         </a>
-        <a href="https://wa.me/5541998998248" target="_blank"
+        <a href="https://wa.me/5541998998248" target="_blank" rel="noopener noreferrer"
            class="border border-primary/60 text-white px-8 py-4 rounded-xl hover:border-primary transition font-bold">
           Pedir orçamento sob medida
         </a>
@@ -89,7 +96,6 @@
   <section class="py-16 px-6 bg-white">
     <div class="max-w-6xl mx-auto reveal">
       <div class="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
-        <!-- ✅ AJUSTE: extensão -->
         <img
           src="produtos-lps.png"
           alt="Planilhas, Dashboards e Apps - LPS"
@@ -175,11 +181,13 @@
             e a LPS entrega a solução pronta + ajustes finos depois do uso real.
           </p>
           <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5541998998248" target="_blank"
+            <a href="https://wa.me/5541998998248" target="_blank" rel="noopener noreferrer"
                class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 transition font-bold shadow-lg">
               <span class="material-symbols-outlined">chat</span> Pedir orçamento no WhatsApp
             </a>
-            <a href="index.html#topo"
+
+            <!-- ✅ AJUSTE: raiz do site -->
+            <a href="/#topo"
                class="border border-primary/60 text-white px-8 py-4 rounded-xl hover:border-primary transition font-bold inline-flex items-center gap-2">
               <span class="material-symbols-outlined">arrow_back</span> Voltar ao site
             </a>
@@ -197,6 +205,43 @@
   </footer>
 
   <script>
+    // ✅ Normaliza links antigos e remove "/index.html" caso apareça em algum link/histórico
+    (function () {
+      try {
+        var path = window.location.pathname || "/";
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+
+        // se alguém cair em "/index.html" por algum link antigo:
+        var cleanedPath = path.replace(/\/index\.html$/i, "/");
+        if (cleanedPath !== path) {
+          window.history.replaceState(null, "", cleanedPath + search + hash);
+        }
+
+        // corrige cliques em "index.html#algo" para "#algo"
+        document.addEventListener("click", function (e) {
+          var a = e.target && e.target.closest ? e.target.closest("a") : null;
+          if (!a) return;
+
+          var href = a.getAttribute("href") || "";
+
+          // ex: "index.html#topo" ou "/index.html#solucoes"
+          if (/(^|\/)index\.html#/i.test(href)) {
+            e.preventDefault();
+            var newHref = href.replace(/(^|\/)index\.html/i, ""); // vira "#topo"
+            window.location.href = "/" + newHref; // garante volta pra raiz + hash
+          }
+
+          // "index.html" puro
+          if (/^(\/)?index\.html$/i.test(href)) {
+            e.preventDefault();
+            window.location.href = "/";
+          }
+        }, true);
+
+      } catch (err) { /* silencioso */ }
+    })();
+
     function reveal() {
       var reveals = document.querySelectorAll(".reveal");
       for (var i = 0; i < reveals.length; i++) {
