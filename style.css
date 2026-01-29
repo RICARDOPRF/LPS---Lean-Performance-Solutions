@@ -100,3 +100,228 @@ html { scroll-behavior: smooth; }
   .lb-btn{width:42px;height:42px;}
   .lightbox-caption{font-size:13px;}
 }
+
+/* ======================================
+   CLIENTES – SLIDER INFINITO (AJUSTADO)
+   ====================================== */
+
+/* máscara */
+.clientes-mask{
+  position: relative;
+  overflow: hidden;
+  padding: 18px 0;
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+/* fade nas laterais (efeito premium, cor do bg-gray-50 do Tailwind) */
+.clientes-mask::before,
+.clientes-mask::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:90px;
+  z-index:2;
+  pointer-events:none;
+  background: linear-gradient(to right, #f9fafb, rgba(249,250,251,0));
+}
+.clientes-mask::after{
+  right:0;
+  transform: rotate(180deg);
+}
+.clientes-mask::before{
+  left:0;
+}
+
+/* trilha */
+.clientes-track{
+  display:flex;
+  align-items:center;
+  gap:56px;
+  width:max-content;
+  animation: clientesScroll 24s linear infinite;
+  will-change: transform;
+}
+
+/* use esta classe nos <img> pra padronizar (recomendado) */
+.cliente-logo{
+  height:48px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+  display:block;
+  opacity:.9;
+  filter: grayscale(1);
+  transition:.2s ease;
+}
+
+/* fallback caso você não coloque a classe no HTML */
+.clientes-track img{
+  height:48px;
+  width:auto;
+  max-width:180px;
+  object-fit:contain;
+  display:block;
+  opacity:.9;
+  filter: grayscale(1);
+  transition:.2s ease;
+}
+
+.clientes-track img:hover,
+.cliente-logo:hover{
+  opacity:1;
+  filter:none;
+  transform:scale(1.05);
+}
+
+.clientes-mask:hover .clientes-track{
+  animation-play-state: paused;
+}
+
+@keyframes clientesScroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Mobile */
+@media (max-width:640px){
+  .clientes-track{
+    gap:36px;
+    animation-duration: 22s;
+  }
+  .clientes-mask::before,
+  .clientes-mask::after{
+    width:60px;
+  }
+  .cliente-logo,
+  .clientes-track img{
+    height:38px;
+    max-width:150px;
+  }
+}
+
+/* Acessibilidade: respeita "reduzir movimento" */
+@media (prefers-reduced-motion: reduce){
+  .clientes-track{ animation: none; }
+}<style>
+  html { scroll-behavior:smooth; }
+  .reveal { opacity:0; transform:translateY(18px); transition:all .75s ease; }
+  .reveal.active { opacity:1; transform:translateY(0); }
+
+  /* ===== CICLO LPS (layout tipo slide, sem sobreposição) ===== */
+  .cycle-shell{
+    position: relative;
+    width: min(520px, 92vw);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+  }
+
+  .lps-cycle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background:
+      conic-gradient(
+        #F04A3E 0deg 140deg,      /* Planejamento puxado */
+        #2D8A93 140deg 245deg,    /* Programação semanal */
+        #F1C40F 245deg 330deg,    /* Reuniões / Check */
+        #ffffff 330deg 360deg     /* Aprendizado */
+      );
+    box-shadow: 0 18px 60px rgba(0,0,0,.12);
+    border: 1px solid rgba(0,0,0,.08);
+    overflow: hidden;
+  }
+
+  .lps-cycle::before{
+    content:"";
+    position:absolute;
+    inset: 24%;
+    background: #fff;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.08);
+    z-index: 1;
+  }
+
+  .cycle-center{
+    position:absolute;
+    inset:0;
+    z-index: 2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding: 10px;
+    pointer-events: none;
+  }
+
+  .cycle-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    font-weight: 900;
+    background: #101820;
+    color: #fff;
+    border: 1px solid rgba(166,142,94,.35);
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    margin: 0 auto 10px auto;
+  }
+
+  .cycle-callout{
+    position:absolute;
+    z-index: 3;
+    width: 190px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(0,0,0,.10);
+    box-shadow: 0 12px 26px rgba(0,0,0,.10);
+  }
+  .cycle-callout h4{
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    margin: 0 0 4px 0;
+    color: #101820;
+  }
+  .cycle-callout p{
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.35;
+    color: rgba(16,24,32,.75);
+  }
+
+  /* posições idênticas ao “slide”: 2 em cima, 2 no meio, 2 em baixo */
+  .c-macro     { left: 2%;  top: 18%; transform: translate(-10%, -50%); }
+  .c-puxado    { left: 2%;  top: 44%; transform: translate(-10%, -50%); }
+  .c-lookahead { left: 2%;  top: 70%; transform: translate(-10%, -50%); }
+
+  .c-semanal   { right: 2%; top: 18%; transform: translate(10%, -50%); }
+  .c-diarias   { right: 2%; top: 44%; transform: translate(10%, -50%); }
+  .c-aprend    { right: 2%; top: 70%; transform: translate(10%, -50%); }
+
+  /* garante que o círculo não “invada” os cards */
+  .cycle-col{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 14px 0;
+  }
+
+  @media (max-width: 1024px){
+    .cycle-callout{ width: 175px; }
+  }
+
+  @media (max-width: 768px){
+    /* no mobile: empilha e não usa callouts em volta (vira lista embaixo) */
+    .cycle-callout{ display:none; }
+    .cycle-shell{ width: min(420px, 92vw); }
+  }
+</style>
+

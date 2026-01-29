@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conheça o LPS | Lean Performance Solutions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#A68E5E",
+            "primary-dark": "#8C764B",
+            bgdark: "#101820",
+            surface: "#1A242D",
+            "surface-2": "#22303B"
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            body: ["Noto Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior:smooth; }
+    .reveal { opacity:0; transform:translateY(18px); transition:all .75s ease; }
+    .reveal.active { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+
+<body class="font-body text-gray-800 bg-white">
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5541998998248" target="_blank"
+     class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-2 border-white"
+     aria-label="Falar no WhatsApp">
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.628 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- NAV simples -->
+  <nav class="bg-bgdark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
+             class="h-14 md:h-16 w-auto object-contain" loading="eager" />
+      </a>
+
+      <div class="hidden md:flex gap-8 text-white/80 text-sm font-medium items-center">
+        <a href="#historia" class="hover:text-primary transition">HISTÓRIA</a>
+        <a href="#ultimo" class="hover:text-primary transition">ÚLTIMO PLANEJADOR</a>
+        <a href="#leanlps" class="hover:text-primary transition">LEAN + LPS</a>
+        <a href="#fluxo" class="hover:text-primary transition">FLUXO</a>
+        <a href="#indicadores" class="hover:text-primary transition">INDICADORES</a>
+        <a href="#resultados" class="hover:text-primary transition">RESULTADOS</a>
+        <a href="#contato" class="bg-primary text-white px-4 py-2 rounded shadow-md hover:bg-primary-dark transition">DIAGNÓSTICO</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-bgdark text-white py-24 px-6 border-b border-primary/20">
+    <div class="max-w-6xl mx-auto text-center reveal">
+      <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+        Conheça o <span class="text-primary">LPS</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+        <strong>Planejamento confiável</strong> que gera <strong>execução previsível</strong>.
+        Método, rotina e indicadores para sustentar resultado real no campo.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contato" class="bg-primary text-white px-8 py-4 rounded-xl shadow-xl hover:bg-primary-dark transition font-bold">
+          Solicitar diagnóstico LPS
+        </a>
+        <a href="#historia" class="border border-primary/60 text-white px-8 py-4 rounded-xl hover:border-primary transition font-bold">
+          Ver como funciona
+        </a>
+      </div>
+
+      <p class="text-[11px] text-gray-500 mt-6 uppercase tracking-widest">
+        “Planejamento confiável gera execução previsível.”
+      </p>
+    </div>
+  </header>
+
+  <!-- 2) HISTÓRIA -->
+  <section id="historia" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal">
+      <div class="lg:col-span-7">
+        <h2 class="text-4xl font-display font-bold mb-6">História do LPS</h2>
+        <ul class="space-y-4 text-gray-700 text-lg leading-relaxed">
+          <li>• Criado por <strong>Glenn Ballard</strong> no início dos anos 90.</li>
+          <li>• Foco em aumentar a confiabilidade do fluxo de trabalho.</li>
+          <li>• Conecta o feito ao que será feito, com previsibilidade.</li>
+          <li>• Atua diretamente com supervisores e encarregados.</li>
+          <li>• Introduz o <strong>PPC</strong> como indicador de confiabilidade.</li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-xl p-4">
+          <img src="historia-lps.png" alt="História do LPS" class="w-full h-auto rounded-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) ÚLTIMO PLANEJADOR -->
+  <section id="ultimo" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-6">Quem é o último planejador?</h2>
+      <p class="max-w-3xl mx-auto text-gray-600 mb-12 text-lg leading-relaxed">
+        No LPS, quem planeja é quem executa. O plano vira compromisso real do campo —
+        com o <strong>encarregado</strong> e supervisores liderando a prontidão e a entrega.
+      </p>
+
+      <div class="max-w-3xl mx-auto">
+        <img src="piramide-lps.png" alt="Pirâmide do último planejador" class="w-full h-auto" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) LEAN CONSTRUCTION + LPS (LINHA DO TEMPO NO SITE) -->
+  <section id="leanlps" class="bg-bgdark text-white py-24 px-6 border-y border-primary/20">
+    <div class="max-w-7xl mx-auto reveal">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-display font-bold uppercase mb-4">
+          Lean Construction e <span class="text-primary">LPS</span>
+        </h2>
+        <p class="text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          Nossa atuação integra os níveis de planejamento com governança estruturada,
+          rituais claros e gestão proativa de restrições, garantindo <strong>fluxo contínuo</strong> e
+          <strong>previsibilidade</strong> na execução.
+        </p>
+      </div>
+
+      <!-- Desktop: timeline horizontal -->
+      <div class="mt-12 hidden md:block">
+        <div class="relative mx-auto max-w-6xl">
+
+          <!-- Linha -->
+          <div class="h-[6px] w-full rounded-full bg-white/60"></div>
+
+          <!-- Itens -->
+          <div class="relative -mt-[18px] grid grid-cols-4 gap-2">
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center shadow-lg border border-white/70">
+                1
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-white text-lg">Longo Prazo</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Estratégia, marcos e fases definindo direcionamento do projeto
+                </p>
+              </div>
+            </div>
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center shadow-lg border border-white/70">
+                2
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-white text-lg">Médio Prazo</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Lookahead com gestão antecipada de restrições e prontidão validada
+                </p>
+              </div>
+            </div>
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center shadow-lg border border-white/70">
+                3
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-white text-lg">Curto Prazo</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Programação semanal com compromisso do campo e medição de PPC
+                </p>
+              </div>
+            </div>
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-primary text-white font-extrabold flex items-center justify-center shadow-lg border border-primary/40">
+                4
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-primary text-lg">Pull Planning</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Planejamento colaborativo com equipes multidisciplinares e compromisso coletivo
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="text-center text-gray-400 text-sm mt-10">
+          Integração dos níveis de planejamento com governança Lean para garantir fluxo contínuo e previsibilidade.
+        </p>
+      </div>
+
+      <!-- Mobile: cards -->
+      <div class="mt-10 space-y-4 md:hidden">
+
+        <div class="bg-surface/70 border border-primary/10 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center">1</span>
+            <p class="font-display font-bold text-white text-lg">Longo Prazo</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Estratégia, marcos e fases definindo direcionamento do projeto.
+          </p>
+        </div>
+
+        <div class="bg-surface/70 border border-primary/10 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center">2</span>
+            <p class="font-display font-bold text-white text-lg">Médio Prazo</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Lookahead com gestão antecipada de restrições e prontidão validada.
+          </p>
+        </div>
+
+        <div class="bg-surface/70 border border-primary/10 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center">3</span>
+            <p class="font-display font-bold text-white text-lg">Curto Prazo</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Programação semanal com compromisso do campo e medição de PPC.
+          </p>
+        </div>
+
+        <div class="bg-surface/70 border border-primary/20 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-primary text-white font-extrabold flex items-center justify-center">4</span>
+            <p class="font-display font-bold text-primary text-lg">Pull Planning</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Planejamento colaborativo com equipes multidisciplinares e compromisso coletivo.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5) CICLO -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-6">Como o LPS é aplicado</h2>
+      <p class="text-gray-500 mb-12 max-w-3xl mx-auto">
+        Implementado através de um ciclo de melhoria contínua, conectando planejamento, execução e aprendizado.
+      </p>
+
+      <div class="max-w-5xl mx-auto bg-gray-50 border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="ciclo-lps.png" alt="Ciclo de aplicação do LPS" class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 6) FLUXO -->
+  <section id="fluxo" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-12">Fluxo de aplicação do LPS</h2>
+
+      <div class="max-w-6xl mx-auto bg-white border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="fluxo-lps.png" alt="Fluxo de aplicação do LPS" class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 7) INDICADORES (AGORA EM CARDS) -->
+  <section id="indicadores" class="py-24 px-6 bg-bgdark text-white">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-4">Indicadores utilizados no LPS</h2>
+      <p class="text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
+        Indicadores para medir prontidão, confiabilidade e produtividade — transformando rotina em decisão com dados.
+      </p>
+
+      <!-- 6WLA -->
+      <div class="text-left max-w-6xl mx-auto">
+        <p class="text-xs uppercase tracking-[0.25em] text-gray-400 mb-4">6WLA</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10 flex flex-col items-center text-center">
+            <p class="text-6xl font-bold text-white/95 tracking-wide">IRR</p>
+            <p class="mt-4 text-sm uppercase tracking-widest text-gray-400">Índice de retirada de restrições</p>
+          </div>
+
+          <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10 flex flex-col items-center text-center">
+            <p class="text-6xl font-bold text-white/95 tracking-wide">IPR</p>
+            <p class="mt-4 text-sm uppercase tracking-widest text-gray-400">Índice de previsibilidade de restrições</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programação Semanal -->
+      <div class="text-left max-w-6xl mx-auto mt-10">
+        <p class="text-xs uppercase tracking-[0.25em] text-gray-400 mb-4">Programação semanal</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10 flex flex-col items-center text-center h-full">
+            <p class="text-6xl font-bold text-white/95 tracking-wide">IPP</p>
+            <p class="mt-4 text-sm uppercase tracking-widest text-gray-400">Índice de produção planejada</p>
+          </div>
+
+          <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10 flex flex-col items-center text-center h-full">
+            <p class="text-6xl font-bold text-white/95 tracking-wide">ICP</p>
+            <p class="mt-4 text-sm uppercase tracking-widest text-gray-400">Índice de capacidade produtiva</p>
+          </div>
+
+          <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10 flex flex-col items-center text-center h-full">
+            <p class="text-6xl font-bold text-white/95 tracking-wide">PCI</p>
+            <p class="mt-4 text-sm uppercase tracking-widest text-gray-400">Pacote informal</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Check In/Out -->
+      <div class="text-left max-w-6xl mx-auto mt-10">
+        <p class="text-xs uppercase tracking-[0.25em] text-gray-400 mb-4">Check in/out</p>
+        <div class="grid md:grid-cols-1 gap-6">
+          <div class="bg-surface/60 border border-primary/10 rounded-3xl p-12 flex flex-col items-center text-center">
+            <p class="text-7xl md:text-8xl font-bold text-white/95 tracking-wide">PPC</p>
+            <p class="mt-4 text-sm uppercase tracking-widest text-gray-400">Percentual planejado concluído</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-sm mt-10 max-w-4xl mx-auto">
+        Esses indicadores conectam rotina de campo + remoção de restrições + compromisso semanal, elevando a confiabilidade do plano.
+      </p>
+    </div>
+  </section>
+
+  <!-- 8) PULL PLANNING -->
+  <section class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center reveal">
+      <div>
+        <h2 class="text-4xl font-display font-bold mb-6">Planejamento Puxado (Pull Planning)</h2>
+        <ul class="space-y-4 text-lg text-gray-700 leading-relaxed">
+          <li>• Sequência colaborativa construída de trás para frente.</li>
+          <li>• Define ritmo e capacidade por frente/equipe, alinhando produção e disponibilidade real.</li>
+          <li>• Elimina conflitos de interfaces e reduz retrabalho entre disciplinas.</li>
+          <li>• Promove engajamento das equipes e aumenta confiabilidade das entregas.</li>
+          <li>• Cria clareza antecipada sobre dependências, riscos e restrições.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="pull-planning.png" alt="Pull Planning" class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 9) RESULTADOS -->
+  <section id="resultados" class="py-24 px-6 bg-bgdark text-white">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-12">Resultados consistentes e mensuráveis</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10">
+          <p class="text-6xl font-bold text-primary">40%</p>
+          <p class="mt-4 text-lg font-semibold">Redução de improviso</p>
+          <p class="text-sm text-gray-300 mt-3">Menos decisões emergenciais e retrabalho com restrições tratadas antes.</p>
+        </div>
+
+        <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10">
+          <p class="text-6xl font-bold text-primary">35%</p>
+          <p class="mt-4 text-lg font-semibold">Ganho de produtividade</p>
+          <p class="text-sm text-gray-300 mt-3">Melhor aproveitamento de equipes e recursos com fluxo previsível.</p>
+        </div>
+
+        <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10">
+          <p class="text-6xl font-bold text-primary">85%+</p>
+          <p class="mt-4 text-lg font-semibold">Confiabilidade de prazo</p>
+          <p class="text-sm text-gray-300 mt-3">PPC consistente acima de 85% após maturação do sistema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10) FECHAMENTO / CONTATO -->
+  <section id="contato" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center reveal">
+
+      <div class="bg-white border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="lps-uniforme.png" alt="LPS" class="w-full h-auto rounded-2xl" />
+      </div>
+
+      <div>
+        <blockquote class="text-3xl font-display font-bold mb-6 leading-snug">
+          “Planejamento confiável gera execução previsível.”
+        </blockquote>
+
+        <p class="text-gray-600 text-lg mb-8">
+          Quer aplicar o LPS com governança, rotina e indicadores na sua obra?
+          A LPS faz o diagnóstico e estrutura o sistema para virar resultado no campo.
+        </p>
+
+        <a href="https://wa.me/5541998998248" target="_blank"
+           class="inline-flex items-center gap-2 bg-primary text-white px-10 py-4 rounded-xl font-bold shadow-xl hover:bg-primary-dark transition">
+          Falar com a LPS no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-bgdark text-white py-10 px-6 border-t border-primary/20">
+    <div class="max-w-7xl mx-auto text-center text-xs text-gray-500 uppercase tracking-widest">
+      © <span id="year"></span> Lean Performance Solutions — Planejar bem é executar melhor.
+    </div>
+  </footer>
+
+  <script>
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    window.onload = () => {
+      reveal();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    };
+  </script>
+
+</body>
+</html>
