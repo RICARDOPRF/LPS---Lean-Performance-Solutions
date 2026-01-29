@@ -5,6 +5,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>LPS - Lean Performance Solutions</title>
 
+  <!-- Canonical: ajuda SEO e força o “endereço oficial” -->
+  <link rel="canonical" href="https://www.leanperformancesolutions.com.br/"/>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet"/>
@@ -111,7 +114,7 @@
 <body class="bg-white font-body text-gray-800">
 
   <!-- WhatsApp Floating -->
-  <a href="https://wa.me/5541998998248" target="_blank"
+  <a href="https://wa.me/5541998998248" target="_blank" rel="noopener noreferrer"
      class="fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-2 border-white"
      aria-label="Falar no WhatsApp">
     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -525,7 +528,7 @@
           <span class="material-symbols-outlined">visibility</span> Saber mais (catálogo completo)
         </a>
         <div class="mt-4">
-          <a href="https://wa.me/5541998998248" target="_blank"
+          <a href="https://wa.me/5541998998248" target="_blank" rel="noopener noreferrer"
              class="text-sm font-semibold text-bg-dark hover:text-primary transition inline-flex items-center gap-2">
             <span class="material-symbols-outlined text-primary">chat</span> Quero pedir um orçamento rápido no WhatsApp
           </a>
@@ -588,7 +591,7 @@
   <section id="clientes" class="bg-gray-50 py-24 px-6 border-t border-gray-100">
     <div class="max-w-7xl mx-auto reveal">
       <h2 class="text-xl font-display font-bold text-center mb-12 uppercase text-gray-400 tracking-widest">
-        Confiados por grandes grupos industriais
+        Experiência em Grandes Grupos Industriais
       </h2>
 
       <div class="clientes-mask" aria-label="Clientes">
@@ -599,11 +602,9 @@
           <img class="cliente-logo" src="Raizen.png" alt="Raízen">
           <img class="cliente-logo" src="bracell.png" alt="Bracell">
           <img class="cliente-logo" src="suzano.jpg" alt="Suzano">
-
           <img class="cliente-logo" src="kemira.png" alt="Kemira">
           <img class="cliente-logo" src="petrobras.png" alt="Petrobras">
           <img class="cliente-logo" src="Solenis-Logo.jpg" alt="Solenis">
-
 
           <!-- LISTA 2 (DUPLICADA) -->
           <img class="cliente-logo" src="Klabin.png" alt="Klabin">
@@ -611,11 +612,9 @@
           <img class="cliente-logo" src="Raizen.png" alt="Raízen">
           <img class="cliente-logo" src="bracell.png" alt="Bracell">
           <img class="cliente-logo" src="suzano.jpg" alt="Suzano">
-
           <img class="cliente-logo" src="kemira.png" alt="Kemira">
           <img class="cliente-logo" src="petrobras.png" alt="Petrobras">
           <img class="cliente-logo" src="Solenis-Logo.jpg" alt="Solenis">
-
         </div>
       </div>
     </div>
@@ -645,7 +644,7 @@
 
       <div class="reveal">
         <h4 class="font-bold text-primary mb-4 uppercase tracking-widest text-sm">Orçamento</h4>
-        <a href="https://wa.me/5541998998248" target="_blank"
+        <a href="https://wa.me/5541998998248" target="_blank" rel="noopener noreferrer"
            class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl inline-flex items-center gap-2 transition font-bold shadow-lg">
           <span class="material-symbols-outlined">chat</span> WhatsApp
         </a>
@@ -658,6 +657,44 @@
   </footer>
 
   <script>
+    // ✅ Limpa a URL: remove "/index.html" e também remove "#topo" quando estiver no topo.
+    (function () {
+      try {
+        var path = window.location.pathname || "/";
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+
+        // remove "/index.html" no final (mantém "/" na raiz)
+        var cleanedPath = path.replace(/\/index\.html$/i, "/");
+
+        // se o hash for "#topo", não precisa ficar aparecendo na URL
+        var cleanedHash = (hash === "#topo") ? "" : hash;
+
+        // só aplica se houver mudança (pra não bagunçar histórico)
+        if (cleanedPath !== path || cleanedHash !== hash) {
+          window.history.replaceState(null, "", cleanedPath + search + cleanedHash);
+        }
+
+        // evita que links antigos "index.html#topo" continuem propagando
+        // (normaliza hrefs internos que apontem para index.html#algumaCoisa)
+        document.addEventListener("click", function (e) {
+          var a = e.target && e.target.closest ? e.target.closest("a") : null;
+          if (!a) return;
+
+          var href = a.getAttribute("href") || "";
+          // exemplos: "index.html#topo", "/index.html#sobre"
+          if (/(^|\/)index\.html#/i.test(href)) {
+            e.preventDefault();
+            var newHref = href.replace(/(^|\/)index\.html/i, "");
+            window.location.hash = newHref.replace(/^#?/, "#");
+          }
+        }, true);
+
+      } catch (err) {
+        // silencioso: não quebra o site
+      }
+    })();
+
     function reveal() {
       var reveals = document.querySelectorAll(".reveal");
       for (var i = 0; i < reveals.length; i++) {
