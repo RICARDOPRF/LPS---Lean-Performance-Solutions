@@ -355,13 +355,89 @@
     </div>
   </section>
 
-  <!-- 7) INDICADORES -->
+  <!-- 7) INDICADORES (✅ corrigido: sem imagem, 100% em layout) -->
   <section id="indicadores" class="py-24 px-6 bg-bgdark text-white">
     <div class="max-w-7xl mx-auto text-center reveal">
-      <h2 class="text-4xl font-display font-bold mb-12">Indicadores utilizados no LPS</h2>
+      <h2 class="text-4xl font-display font-bold mb-10">Indicadores utilizados no LPS</h2>
 
-      <div class="max-w-5xl mx-auto bg-surface-2 border border-primary/10 rounded-3xl p-4">
-        <img src="/indicadores-lps.png" alt="Indicadores utilizados no LPS" class="w-full h-auto rounded-2xl" />
+      <div class="mx-auto max-w-6xl bg-surface-2/70 border border-primary/10 rounded-3xl p-6 md:p-10 shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+          <!-- Coluna esquerda (6WLA / Programação / Check In-Out) -->
+          <div class="flex flex-col justify-between gap-6 text-left">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <p class="text-2xl md:text-3xl font-display font-bold tracking-wide">6WLA</p>
+              <p class="text-xs text-gray-300 mt-2 uppercase tracking-widest">
+                Lookahead 6 semanas
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <p class="text-2xl md:text-3xl font-display font-bold tracking-wide leading-tight">
+                Programação<br/>Semanal
+              </p>
+              <p class="text-xs text-gray-300 mt-2 uppercase tracking-widest">
+                WWP (Weekly Work Plan)
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <p class="text-2xl md:text-3xl font-display font-bold tracking-wide">Check In/Out</p>
+              <p class="text-xs text-gray-300 mt-2 uppercase tracking-widest">
+                Acompanhamento diário
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna central (IRR / IPP / PPC) -->
+          <div class="flex flex-col gap-6">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-7 text-center">
+              <p class="text-5xl font-display font-bold">IRR</p>
+              <p class="text-xs text-gray-300 mt-3 uppercase tracking-widest">
+                Índice de Retirada de Restrições
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-7 text-center">
+              <p class="text-5xl font-display font-bold">IPP</p>
+              <p class="text-xs text-gray-300 mt-3 uppercase tracking-widest">
+                Índice de Produção Planejada
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-7 text-center">
+              <p class="text-5xl font-display font-bold">PPC</p>
+              <p class="text-xs text-gray-300 mt-3 uppercase tracking-widest">
+                Percentual Planejado Concluído
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna direita (IPR / ICP / PCI) -->
+          <div class="flex flex-col gap-6 justify-between">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-7 text-center">
+              <p class="text-5xl font-display font-bold">IPR</p>
+              <p class="text-xs text-gray-300 mt-3 uppercase tracking-widest">
+                Índice de Previsibilidade de Restrições
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-7 text-center">
+              <p class="text-5xl font-display font-bold">ICP</p>
+              <p class="text-xs text-gray-300 mt-3 uppercase tracking-widest">
+                Índice de Capacidade Produtiva
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-7 text-center">
+              <p class="text-5xl font-display font-bold">PCI</p>
+              <p class="text-xs text-gray-300 mt-3 uppercase tracking-widest">
+                Pacote Informal
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <p class="text-gray-400 text-sm mt-8 max-w-4xl mx-auto">
