@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conheça o LPS | Lean Performance Solutions</title>
 
-  <!-- ✅ Canonical (URL limpa) -->
+  <!-- ✅ Canonical limpo (sem .html) -->
   <link rel="canonical" href="https://www.leanperformancesolutions.com.br/lps/"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,6 +36,9 @@
     .reveal { opacity:0; transform:translateY(18px); transition:all .75s ease; }
     .reveal.active { opacity:1; transform:translateY(0); }
 
+    /* ===========================
+      CLIENTES – SLIDER INFINITO
+      =========================== */
     .clientes-mask{
       position: relative;
       overflow: hidden;
@@ -43,6 +46,8 @@
       border-top: 1px solid rgba(0,0,0,.06);
       border-bottom: 1px solid rgba(0,0,0,.06);
     }
+
+    /* fade nas laterais (mesma cor do bg-gray-50 do Tailwind) */
     .clientes-mask::before,
     .clientes-mask::after{
       content:"";
@@ -90,12 +95,14 @@
       to   { transform: translateX(-50%); }
     }
 
+    /* Mobile */
     @media (max-width: 640px){
       .clientes-track{ gap: 36px; animation-duration: 22s; }
       .cliente-logo{ height: 38px; max-width: 150px; }
       .clientes-mask::before, .clientes-mask::after{ width: 60px; }
     }
 
+    /* Acessibilidade: respeita "reduzir movimento" */
     @media (prefers-reduced-motion: reduce){
       .clientes-track{ animation: none; }
     }
@@ -113,11 +120,12 @@
     </svg>
   </a>
 
-  <!-- NAV -->
+  <!-- NAV simples -->
   <nav class="bg-bgdark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3" aria-label="Voltar para a página inicial">
-        <img src="../logo-transparente.png" alt="LPS - Lean Performance Solutions"
+      <!-- ✅ volta pra raiz -->
+      <a href="/#topo" class="flex items-center gap-3" aria-label="Voltar para a página inicial">
+        <img src="/logo-transparente.png" alt="LPS - Lean Performance Solutions"
              class="h-14 md:h-16 w-auto object-contain" loading="eager" />
       </a>
 
@@ -159,9 +167,7 @@
     </div>
   </header>
 
-  <!-- CONTEÚDO (igual o seu) -->
-  <!-- A PARTIR DAQUI EU MANTIVE TUDO IGUAL, SÓ AJUSTEI caminhos de imagens para funcionar dentro da pasta /lps/ -->
-
+  <!-- 2) HISTÓRIA -->
   <section id="historia" class="py-24 px-6 bg-gray-50">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal">
       <div class="lg:col-span-7">
@@ -177,12 +183,13 @@
 
       <div class="lg:col-span-5">
         <div class="bg-white rounded-3xl border border-gray-100 shadow-xl p-4">
-          <img src="../historia-lps.png" alt="História do LPS" class="w-full h-auto rounded-2xl" />
+          <img src="/historia-lps.png" alt="História do LPS" class="w-full h-auto rounded-2xl" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 3) ÚLTIMO PLANEJADOR -->
   <section id="ultimo" class="py-24 px-6 bg-white">
     <div class="max-w-6xl mx-auto text-center reveal">
       <h2 class="text-4xl font-display font-bold mb-6">Quem é o último planejador?</h2>
@@ -192,26 +199,229 @@
       </p>
 
       <div class="max-w-3xl mx-auto">
-        <img src="../piramide-lps.png" alt="Pirâmide do último planejador" class="w-full h-auto" />
+        <img src="/piramide-lps.png" alt="Pirâmide do último planejador" class="w-full h-auto" />
       </div>
     </div>
   </section>
 
+  <!-- 4) LEAN CONSTRUCTION + LPS -->
   <section id="leanlps" class="bg-bgdark text-white py-24 px-6 border-y border-primary/20">
     <div class="max-w-7xl mx-auto reveal">
-      <!-- ... mantém o resto igual ... -->
-      <!-- IMPORTANTE: onde tiver src="algumaimagem.png", troque para src="../algumaimagem.png" -->
-      <!-- Eu já fiz isso nos exemplos acima; faça igual no restante do arquivo se suas imagens estão na raiz. -->
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-display font-bold uppercase mb-4">
+          Lean Construction e <span class="text-primary">LPS</span>
+        </h2>
+        <p class="text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          Nossa atuação integra os níveis de planejamento com governança estruturada,
+          rituais claros e gestão proativa de restrições, garantindo <strong>fluxo contínuo</strong> e
+          <strong>previsibilidade</strong> na execução.
+        </p>
+      </div>
+
+      <!-- Desktop: timeline horizontal -->
+      <div class="mt-12 hidden md:block">
+        <div class="relative mx-auto max-w-6xl">
+
+          <div class="h-[6px] w-full rounded-full bg-white/60"></div>
+
+          <div class="relative -mt-[18px] grid grid-cols-4 gap-2">
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center shadow-lg border border-white/70">
+                1
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-white text-lg">Longo Prazo</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Estratégia, marcos e fases definindo direcionamento do projeto
+                </p>
+              </div>
+            </div>
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center shadow-lg border border-white/70">
+                2
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-white text-lg">Médio Prazo</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Lookahead com gestão antecipada de restrições e prontidão validada
+                </p>
+              </div>
+            </div>
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center shadow-lg border border-white/70">
+                3
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-white text-lg">Curto Prazo</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Programação semanal com compromisso do campo e medição de PPC
+                </p>
+              </div>
+            </div>
+
+            <div class="relative text-center">
+              <div class="mx-auto w-11 h-11 rounded-xl bg-primary text-white font-extrabold flex items-center justify-center shadow-lg border border-primary/40">
+                4
+              </div>
+              <div class="mt-6">
+                <p class="font-display font-bold text-primary text-lg">Pull Planning</p>
+                <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                  Planejamento colaborativo com equipes multidisciplinares e compromisso coletivo
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="text-center text-gray-400 text-sm mt-10">
+          Integração dos níveis de planejamento com governança Lean para garantir fluxo contínuo e previsibilidade.
+        </p>
+      </div>
+
+      <!-- Mobile: cards -->
+      <div class="mt-10 space-y-4 md:hidden">
+
+        <div class="bg-surface/70 border border-primary/10 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center">1</span>
+            <p class="font-display font-bold text-white text-lg">Longo Prazo</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Estratégia, marcos e fases definindo direcionamento do projeto.
+          </p>
+        </div>
+
+        <div class="bg-surface/70 border border-primary/10 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center">2</span>
+            <p class="font-display font-bold text-white text-lg">Médio Prazo</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Lookahead com gestão antecipada de restrições e prontidão validada.
+          </p>
+        </div>
+
+        <div class="bg-surface/70 border border-primary/10 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-white text-bgdark font-extrabold flex items-center justify-center">3</span>
+            <p class="font-display font-bold text-white text-lg">Curto Prazo</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Programação semanal com compromisso do campo e medição de PPC.
+          </p>
+        </div>
+
+        <div class="bg-surface/70 border border-primary/20 rounded-2xl p-5">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-primary text-white font-extrabold flex items-center justify-center">4</span>
+            <p class="font-display font-bold text-primary text-lg">Pull Planning</p>
+          </div>
+          <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+            Planejamento colaborativo com equipes multidisciplinares e compromisso coletivo.
+          </p>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- (mantém o restante do seu conteúdo exatamente igual, ajustando src de imagens para ../) -->
+  <!-- 5) CICLO -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-6">Como o LPS é aplicado</h2>
+      <p class="text-gray-500 mb-12 max-w-3xl mx-auto">
+        Implementado através de um ciclo de melhoria contínua, conectando planejamento, execução e aprendizado.
+      </p>
+
+      <div class="max-w-5xl mx-auto bg-gray-50 border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="/ciclo-lps.png" alt="Ciclo de aplicação do LPS" class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 6) FLUXO -->
+  <section id="fluxo" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-12">Fluxo de aplicação do LPS</h2>
+
+      <div class="max-w-6xl mx-auto bg-white border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="/fluxo-lps.png" alt="Fluxo de aplicação do LPS" class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 7) INDICADORES -->
+  <section id="indicadores" class="py-24 px-6 bg-bgdark text-white">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-12">Indicadores utilizados no LPS</h2>
+
+      <div class="max-w-5xl mx-auto bg-surface-2 border border-primary/10 rounded-3xl p-4">
+        <img src="/indicadores-lps.png" alt="Indicadores utilizados no LPS" class="w-full h-auto rounded-2xl" />
+      </div>
+
+      <p class="text-gray-400 text-sm mt-8 max-w-4xl mx-auto">
+        Indicadores para medir prontidão, confiabilidade e produtividade — transformando rotina em decisão com dados.
+      </p>
+    </div>
+  </section>
+
+  <!-- 8) PULL PLANNING -->
+  <section class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center reveal">
+      <div>
+        <h2 class="text-4xl font-display font-bold mb-6">Planejamento Puxado (Pull Planning)</h2>
+        <ul class="space-y-4 text-lg text-gray-700 leading-relaxed">
+          <li>• Sequência colaborativa construída de trás para frente.</li>
+          <li>• Define ritmo e capacidade por frente/equipe, alinhando produção e disponibilidade real.</li>
+          <li>• Elimina conflitos de interfaces e reduz retrabalho entre disciplinas.</li>
+          <li>• Promove engajamento das equipes e aumenta confiabilidade das entregas.</li>
+          <li>• Cria clareza antecipada sobre dependências, riscos e restrições.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white border border-gray-100 rounded-3xl p-4 shadow-lg">
+        <img src="/pull-planning.png" alt="Pull Planning" class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 9) RESULTADOS -->
+  <section id="resultados" class="py-24 px-6 bg-bgdark text-white">
+    <div class="max-w-7xl mx-auto text-center reveal">
+      <h2 class="text-4xl font-display font-bold mb-12">Resultados consistentes e mensuráveis</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10">
+          <p class="text-6xl font-bold text-primary">40%</p>
+          <p class="mt-4 text-lg font-semibold">Redução de improviso</p>
+          <p class="text-sm text-gray-300 mt-3">Menos decisões emergenciais e retrabalho com restrições tratadas antes.</p>
+        </div>
+
+        <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10">
+          <p class="text-6xl font-bold text-primary">35%</p>
+          <p class="mt-4 text-lg font-semibold">Ganho de produtividade</p>
+          <p class="text-sm text-gray-300 mt-3">Melhor aproveitamento de equipes e recursos com fluxo previsível.</p>
+        </div>
+
+        <div class="bg-surface/60 border border-primary/10 rounded-3xl p-10">
+          <p class="text-6xl font-bold text-primary">85%+</p>
+          <p class="mt-4 text-lg font-semibold">Confiabilidade de prazo</p>
+          <p class="text-sm text-gray-300 mt-3">PPC consistente acima de 85% após maturação do sistema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="contato" class="py-24 px-6 bg-gray-50">
     <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center reveal">
 
       <div class="bg-white border border-gray-100 rounded-3xl p-4 shadow-lg">
-        <img src="../lps-uniforme.png" alt="LPS" class="w-full h-auto rounded-2xl" />
+        <img src="/lps-uniforme.png" alt="LPS" class="w-full h-auto rounded-2xl" />
       </div>
 
       <div>
@@ -240,24 +450,43 @@
   </footer>
 
   <script>
-    // ✅ Remove /index.html e também redireciona /lps.html -> /lps/ (mantendo hash)
+    // ✅ Normaliza URLs e remove ".html" do LPS mantendo o #hash
     (function () {
       try {
         var path = window.location.pathname || "/";
         var search = window.location.search || "";
         var hash = window.location.hash || "";
 
-        // 1) /index.html -> /
-        if (/\/index\.html$/i.test(path)) {
-          var toRoot = path.replace(/\/index\.html$/i, "/");
-          window.history.replaceState(null, "", toRoot + search + hash);
-        }
-
-        // 2) /lps.html -> /lps/
+        // 1) /lps.html -> /lps/ (mantém hash)
         if (/\/lps\.html$/i.test(path)) {
           window.location.replace("/lps/" + search + hash);
           return;
         }
+
+        // 2) remove /index.html onde aparecer
+        if (/\/index\.html$/i.test(path)) {
+          var cleaned = path.replace(/\/index\.html$/i, "/");
+          window.history.replaceState(null, "", cleaned + search + hash);
+        }
+
+        // 3) corrige cliques em links antigos (ex: "index.html#algo")
+        document.addEventListener("click", function (e) {
+          var a = e.target && e.target.closest ? e.target.closest("a") : null;
+          if (!a) return;
+
+          var href = a.getAttribute("href") || "";
+
+          if (/(^|\/)index\.html#/i.test(href)) {
+            e.preventDefault();
+            var newHref = href.replace(/(^|\/)index\.html/i, "");
+            window.location.href = "/" + newHref;
+          }
+
+          if (/^(\/)?index\.html$/i.test(href)) {
+            e.preventDefault();
+            window.location.href = "/";
+          }
+        }, true);
 
       } catch (err) { /* silencioso */ }
     })();
