@@ -5,8 +5,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Serviços Técnicos | LPS - Lean Performance Solutions</title>
 
-  <!-- Canonical (endereço oficial desta página) -->
-  <link rel="canonical" href="https://www.leanperformancesolutions.com.br/servicos-tecnicos.html"/>
+  <!-- ✅ Canonical (URL limpa, sem .html) -->
+  <link rel="canonical" href="https://www.leanperformancesolutions.com.br/servicos-tecnicos/"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet"/>
@@ -32,7 +32,15 @@
     }
   </script>
 
-  <link rel="stylesheet" href="style.css"/>
+  <!-- ✅ Mantém seu CSS (agora com caminho absoluto pra funcionar dentro da pasta) -->
+  <link rel="stylesheet" href="/style.css"/>
+
+  <!-- Segurança extra: scroll suave e reveal caso esteja fora do style.css -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: all 0.75s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 
 <body class="bg-white font-body text-gray-800">
@@ -49,9 +57,9 @@
   <!-- NAV -->
   <nav class="bg-bg-dark px-6 py-5 sticky top-0 z-50 shadow-lg border-b border-primary/20">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <!-- ✅ em vez de index.html#topo -->
+      <!-- ✅ volta pra home sem index.html -->
       <a href="/#topo" class="flex items-center gap-3" aria-label="Voltar para a página inicial">
-        <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
+        <img src="/logo-transparente.png" alt="LPS - Lean Performance Solutions"
              class="h-14 md:h-20 w-auto object-contain" loading="eager"/>
       </a>
 
@@ -96,7 +104,7 @@
 
       <div class="md:col-span-5">
         <div class="rounded-3xl overflow-hidden img-glow border border-primary/20">
-          <img src="servicos-hero.jpg" alt="Serviços Técnicos - LPS" class="w-full h-[360px] md:h-[420px] object-cover"/>
+          <img src="/servicos-hero.jpg" alt="Serviços Técnicos - LPS" class="w-full h-[360px] md:h-[420px] object-cover"/>
         </div>
       </div>
     </div>
@@ -204,16 +212,16 @@
 
           <div class="md:col-span-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <img src="eletrica-01.jpg" data-gallery="eletrica" data-caption="Painel/CCM: sinalização, botoeiras e identificação para operação segura."
+              <img src="/eletrica-01.jpg" data-gallery="eletrica" data-caption="Painel/CCM: sinalização, botoeiras e identificação para operação segura."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 01">
-              <img src="eletrica-02.jpg" data-gallery="eletrica" data-caption="Montagem de painel: bornes, disjuntores e organização de fiação conforme padrão."
+              <img src="/eletrica-02.jpg" data-gallery="eletrica" data-caption="Montagem de painel: bornes, disjuntores e organização de fiação conforme padrão."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 02">
-              <img src="eletrica-03.jpg" data-gallery="eletrica" data-caption="Painel em ajuste: correção de chicotes e melhoria de organização/identificação."
+              <img src="/eletrica-03.jpg" data-gallery="eletrica" data-caption="Painel em ajuste: correção de chicotes e melhoria de organização/identificação."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 03">
-              <img src="eletrica-04.jpg" data-gallery="eletrica" data-caption="Trabalho em campo: lançamento/adequação de cabos e acabamento para entrega organizada."
+              <img src="/eletrica-04.jpg" data-gallery="eletrica" data-caption="Trabalho em campo: lançamento/adequação de cabos e acabamento para entrega organizada."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Elétrica 04">
             </div>
@@ -266,16 +274,16 @@
 
           <div class="md:col-span-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <img src="instr-01.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: substitua por fotos reais de instrumentos/TAG em campo."
+              <img src="/instr-01.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: substitua por fotos reais de instrumentos/TAG em campo."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 01">
-              <img src="instr-02.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: instalação e organização para comissionamento."
+              <img src="/instr-02.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: instalação e organização para comissionamento."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 02">
-              <img src="instr-03.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: interligações de sinal e identificação."
+              <img src="/instr-03.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: interligações de sinal e identificação."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 03">
-              <img src="instr-04.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: suporte a loop test / evidências."
+              <img src="/instr-04.jpg" data-gallery="instrumentacao" data-caption="Exemplo de referência: suporte a loop test / evidências."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Instrumentação 04">
             </div>
@@ -328,16 +336,16 @@
 
           <div class="md:col-span-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <img src="auto-01.jpg" data-gallery="automacao" data-caption="Painel de automação: organização de bornes e interligações para integração/partida."
+              <img src="/auto-01.jpg" data-gallery="automacao" data-caption="Painel de automação: organização de bornes e interligações para integração/partida."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 01">
-              <img src="auto-02.jpg" data-gallery="automacao" data-caption="I/O e rede: patch cords e conectividade com rastreabilidade de pontos."
+              <img src="/auto-02.jpg" data-gallery="automacao" data-caption="I/O e rede: patch cords e conectividade com rastreabilidade de pontos."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 02">
-              <img src="auto-03.jpg" data-gallery="automacao" data-caption="Montagem/adequação de painel: organização e identificação para entrega e testes."
+              <img src="/auto-03.jpg" data-gallery="automacao" data-caption="Montagem/adequação de painel: organização e identificação para entrega e testes."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 03">
-              <img src="auto-04.jpg" data-gallery="automacao" data-caption="Painel com I/O e acessórios: checagem de sinais (quando aplicável) e evidências."
+              <img src="/auto-04.jpg" data-gallery="automacao" data-caption="Painel com I/O e acessórios: checagem de sinais (quando aplicável) e evidências."
                    onclick="openLightbox(this)"
                    class="zoomable rounded-2xl w-full h-[260px] md:h-[240px] object-cover border border-gray-100 shadow-sm" alt="Automação 04">
             </div>
@@ -364,7 +372,6 @@
           <span class="material-symbols-outlined">chat</span> Falar agora no WhatsApp
         </a>
 
-        <!-- ✅ em vez de index.html#contato -->
         <a href="/#contato"
            class="border border-primary/60 text-bg-dark px-10 py-4 rounded-xl hover:border-primary transition font-bold inline-flex items-center gap-2 justify-center bg-white">
           <span class="material-symbols-outlined text-primary">arrow_back</span> Voltar para o site
@@ -378,7 +385,7 @@
     <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
       <div class="reveal">
         <a href="/#topo" class="inline-flex items-center justify-center md:justify-start mb-6" aria-label="Voltar ao topo do site">
-          <img src="logo-transparente.png" alt="LPS - Lean Performance Solutions"
+          <img src="/logo-transparente.png" alt="LPS - Lean Performance Solutions"
                class="h-14 w-auto object-contain" loading="lazy" />
         </a>
         <p class="text-gray-400 text-sm leading-relaxed">
@@ -423,34 +430,39 @@
   </div>
 
   <script>
-    // ✅ Normaliza URLs antigas e remove "/index.html" caso apareça em algum link/histórico
+    // ✅ 1) /servicos-tecnicos.html -> /servicos-tecnicos/ (mantém hash)
+    // ✅ 2) remove /index.html se cair nele
     (function () {
       try {
         var path = window.location.pathname || "/";
         var search = window.location.search || "";
         var hash = window.location.hash || "";
 
-        // Se alguém abrir "/index.html" por engano, troca para "/"
-        var cleanedPath = path.replace(/\/index\.html$/i, "/");
-        if (cleanedPath !== path) {
-          window.history.replaceState(null, "", cleanedPath + search + hash);
+        // /index.html -> /
+        if (/\/index\.html$/i.test(path)) {
+          var cleaned = path.replace(/\/index\.html$/i, "/");
+          window.history.replaceState(null, "", cleaned + search + hash);
         }
 
-        // Corrige cliques em links antigos "index.html#algo"
+        // /servicos-tecnicos.html -> /servicos-tecnicos/
+        if (/\/servicos-tecnicos\.html$/i.test(path)) {
+          window.location.replace("/servicos-tecnicos/" + search + hash);
+          return;
+        }
+
+        // Corrige cliques em links antigos "index.html#algo" -> "/#algo"
         document.addEventListener("click", function (e) {
           var a = e.target && e.target.closest ? e.target.closest("a") : null;
           if (!a) return;
 
           var href = a.getAttribute("href") || "";
 
-          // "index.html#topo" ou "/index.html#metodo"
           if (/(^|\/)index\.html#/i.test(href)) {
             e.preventDefault();
-            var newHref = href.replace(/(^|\/)index\.html/i, ""); // vira "#topo"
-            window.location.href = "/" + newHref; // garante raiz + hash
+            var newHref = href.replace(/(^|\/)index\.html/i, "");
+            window.location.href = "/" + newHref;
           }
 
-          // "index.html" puro -> "/"
           if (/^(\/)?index\.html$/i.test(href)) {
             e.preventDefault();
             window.location.href = "/";
@@ -460,14 +472,26 @@
       } catch (err) { /* silencioso */ }
     })();
 
-    // Ano automático no footer (sem depender do script.js)
+    // Ano automático no footer (mesmo se script.js falhar)
     (function () {
       var y = document.getElementById("year");
       if (y) y.textContent = new Date().getFullYear();
     })();
+
+    // Reveal
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
   </script>
 
-  <!-- mantém seu JS da galeria / tabs / lightbox -->
-  <script src="script.js"></script>
+  <!-- ✅ Mantém seu JS (agora absoluto pra funcionar dentro da pasta) -->
+  <script src="/script.js"></script>
 </body>
 </html>
