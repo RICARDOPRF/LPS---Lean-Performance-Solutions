@@ -62,25 +62,54 @@
   }
 
   window.openLightbox = function (imgEl) {
-    const galleryName = imgEl.dataset.gallery || "default";
-    lbGallery = Array.from(document.querySelectorAll('img[data-gallery="' + galleryName + '"]'));
-    lbIndex = lbGallery.indexOf(imgEl);
-    if (lbIndex < 0) lbIndex = 0;
-
+    if (!imgEl) return;
     renderLightbox();
 
     const lightbox = document.getElementById("lightbox");
-    if (!lightbox) return;
+    const lightboxImg = document.getElementById("lightbox-img");
+    const captionEl = document.getElementById("lightbox-caption");
+    if (!lightbox || !lightboxImg || !captionEl) return;
+
+    // monta lista do grupo (data-gallery)
+    const galleryName = imgEl.dataset.gallery || "";
+    const list = galleryName
+      ? Array.from(document.querySelectorAll('img[data-gallery="' + galleryName + '"]'))
+      : [imgEl];
+
+    currentGallery = list;
+    currentIndex = Math.max(0, list.indexOf(imgEl));
+
+    const src = imgEl.getAttribute("src") || "";
+    const cap = imgEl.dataset.caption || imgEl.getAttribute("alt") || "";
+
+    lightboxImg.src = src;
+    lightboxImg.alt = imgEl.getAttribute("alt") || "Imagem ampliada";
+    captionEl.textContent = cap;
+
+    // abre modal “delicado”
     lightbox.classList.add("active");
     lightbox.setAttribute("aria-hidden", "false");
-    reminderNavButtons();
+
+    // trava scroll do fundo
+    document.body.dataset.prevOverflow = document.body.style.overflow || "";
+    document.body.style.overflow = "hidden";
+    document.body.style.touchAction = "none";
+
+    // foca no modal pra acessibilidade
+    const closeBtn = lightbox.querySelector(".lb-close");
+    if (closeBtn) closeBtn.focus({ preventScroll: true });
   };
 
   window.closeLightbox = function () {
     const lightbox = document.getElementById("lightbox");
     if (!lightbox) return;
+
     lightbox.classList.remove("active");
     lightbox.setAttribute("aria-hidden", "true");
+
+    // destrava scroll do fundo
+    document.body.style.overflow = document.body.dataset.prevOverflow || "";
+    document.body.style.touchAction = "";
   };
 
   window.nextLightbox = function () {
